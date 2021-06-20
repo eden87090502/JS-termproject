@@ -1,0 +1,1166 @@
+<!DOCTYPE HTML>
+<html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Pagify</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script
+	src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	</script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="pagify.css">
+	<script src="pagify.js"></script>
+</html>
+
+<body>
+	<table id="college">
+		<caption>大專院校</caption>
+		<thead>
+			<tr>
+				<th>代碼</th>
+				<th>學校名稱</th>
+				<th>中文地址</th>
+				<th>電話</th>
+				<th>網址</th>
+			</tr>
+		</thead>
+		<tbody id="content">
+			<tr>
+				<td>0001</td>
+				<td>國立政治大學</td>
+				<td>[116]臺北市文山區指南路二段64號</td>
+				<td>(02)29393091</td>
+				<td><a href="http://www.nccu.edu.tw/">http://www.nccu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0002</td>
+				<td>國立清華大學</td>
+				<td>[300]新竹市東區光復路二段101號</td>
+				<td>(03)5715131</td>
+				<td><a href="http://www.nthu.edu.tw/">http://www.nthu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0003</td>
+				<td>國立臺灣大學</td>
+				<td>[106]臺北市大安區羅斯福路四段1號</td>
+				<td>(02)33663366</td>
+				<td><a href="http://www.ntu.edu.tw/">http://www.ntu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0004</td>
+				<td>國立臺灣師範大學</td>
+				<td>[106]臺北市大安區和平東路一段162號</td>
+				<td>(02)77341111</td>
+				<td><a href="http://www.ntnu.edu.tw/">http://www.ntnu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0005</td>
+				<td>國立成功大學</td>
+				<td>[701]臺南市東區大學路1號</td>
+				<td>(06)2757575</td>
+				<td><a href="http://www.ncku.edu.tw/">http://www.ncku.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0006</td>
+				<td>國立中興大學</td>
+				<td>[402]臺中市南區國光路250號</td>
+				<td>(04)22873181</td>
+				<td><a href="http://www.nchu.edu.tw/">http://www.nchu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0007</td>
+				<td>國立交通大學</td>
+				<td>[300]新竹市東區大學路1001號</td>
+				<td>(03)5712121</td>
+				<td><a href="http://www.nctu.edu.tw/">http://www.nctu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0008</td>
+				<td>國立中央大學</td>
+				<td>[320]桃園縣中壢市中大路300號</td>
+				<td>(03)4227151</td>
+				<td><a href="http://www.ncu.edu.tw/">http://www.ncu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0009</td>
+				<td>國立中山大學</td>
+				<td>[804]高雄市鼓山區蓮海路70號</td>
+				<td>(07)5252000</td>
+				<td><a href="http://www.nsysu.edu.tw/">http://www.nsysu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0012</td>
+				<td>國立臺灣海洋大學</td>
+				<td>[202]基隆市中正區北寧路2號</td>
+				<td>(02)24622192</td>
+				<td><a href="http://www.ntou.edu.tw/">http://www.ntou.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0013</td>
+				<td>國立中正大學</td>
+				<td>[621]嘉義縣民雄鄉三興村7鄰大學路一段168號</td>
+				<td>(05)2720411</td>
+				<td><a href="http://www.ccu.edu.tw/">http://www.ccu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0014</td>
+				<td>國立高雄師範大學</td>
+				<td>[802]高雄市苓雅區和平一路116號</td>
+				<td>(07)7172930</td>
+				<td><a href="http://www.nknu.edu.tw/">http://www.nknu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0015</td>
+				<td>國立彰化師範大學</td>
+				<td>[500]彰化縣彰化市進德路1號</td>
+				<td>(04)7232105</td>
+				<td><a href="http://www.ncue.edu.tw/">http://www.ncue.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0016</td>
+				<td>國立陽明大學</td>
+				<td>[112]臺北市北投區立農街二段155號</td>
+				<td>(02)28267000</td>
+				<td><a href="http://www.ym.edu.tw/">http://www.ym.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0017</td>
+				<td>國立臺北大學</td>
+				<td>[237]新北市三峽區大學路151號</td>
+				<td>(02)86741111</td>
+				<td><a href="http://www.ntpu.edu.tw/chinese/">http://www.ntpu.edu.tw/chinese/</a></td>
+			</tr>
+			<tr>
+				<td>0018</td>
+				<td>國立嘉義大學</td>
+				<td>[600]嘉義市東區鹿寮里學府路300號</td>
+				<td>(05)2717000</td>
+				<td><a href="http://www.ncyu.edu.tw/">http://www.ncyu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0019</td>
+				<td>國立高雄大學</td>
+				<td>[811]高雄市楠梓區高雄大學路700號</td>
+				<td>(07)5919000</td>
+				<td><a href="http://www.nuk.edu.tw/">http://www.nuk.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0020</td>
+				<td>國立東華大學</td>
+				<td>[974]花蓮縣壽豐鄉志學村大學路二段1號</td>
+				<td>(03)8635000</td>
+				<td><a href="http://www.ndhu.edu.tw/">http://www.ndhu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0021</td>
+				<td>國立暨南國際大學</td>
+				<td>[545]南投縣埔里鎮大學路1號</td>
+				<td>(049)6003100#2996</td>
+				<td><a href="http://www.ncnu.edu.tw/">http://www.ncnu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0022</td>
+				<td>國立臺灣科技大學</td>
+				<td>[106]臺北市大安區基隆路四段43號</td>
+				<td>(02)27333141</td>
+				<td><a href="http://www.ntust.edu.tw/">http://www.ntust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0023</td>
+				<td>國立雲林科技大學</td>
+				<td>[640]雲林縣斗六市大學路三段123號</td>
+				<td>(05)5342601</td>
+				<td><a href="http://www.yuntech.edu.tw/">http://www.yuntech.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0024</td>
+				<td>國立屏東科技大學</td>
+				<td>[912]屏東縣內埔鄉學府路1號</td>
+				<td>(08)7703202</td>
+				<td><a href="http://www.npust.edu.tw/">http://www.npust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0025</td>
+				<td>國立臺北科技大學</td>
+				<td>[106]臺北市大安區忠孝東路三段1號</td>
+				<td>(02)27712171</td>
+				<td><a href="http://www.ntut.edu.tw/">http://www.ntut.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0026</td>
+				<td>國立高雄第一科技大學</td>
+				<td>[824]高雄市燕巢區大學路1號</td>
+				<td>(07)6011000</td>
+				<td><a href="http://www.nkfust.edu.tw/">http://www.nkfust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0027</td>
+				<td>國立高雄應用科技大學</td>
+				<td>[807]高雄市三民區建工路415號</td>
+				<td>(07)3814526</td>
+				<td><a href="http://www.kuas.edu.tw/">http://www.kuas.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0028</td>
+				<td>國立臺北藝術大學</td>
+				<td>[112]臺北市北投區學園路1號</td>
+				<td>(02)28961000</td>
+				<td><a href="http://www.tnua.edu.tw/">http://www.tnua.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0029</td>
+				<td>國立臺灣藝術大學</td>
+				<td>[220]新北市板橋區大觀路一段59號</td>
+				<td>(02)22722181</td>
+				<td><a href="http://www.ntua.edu.tw/">http://www.ntua.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0030</td>
+				<td>國立臺東大學</td>
+				<td>[950]臺東縣臺東市中華路一段684號</td>
+				<td>(089)318855</td>
+				<td><a href="http://www.nttu.edu.tw/">http://www.nttu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0031</td>
+				<td>國立宜蘭大學</td>
+				<td>[260]宜蘭縣宜蘭市神農路一段1號</td>
+				<td>(03)9357400</td>
+				<td><a href="http://www.niu.edu.tw/">http://www.niu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0032</td>
+				<td>國立聯合大學</td>
+				<td>[360]苗栗縣苗栗市恭敬里聯大1號</td>
+				<td>(037)381000</td>
+				<td><a href="http://www.nuu.edu.tw/">http://www.nuu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0033</td>
+				<td>國立虎尾科技大學</td>
+				<td>[632]雲林縣虎尾鎮文化路64號</td>
+				<td>(05)6315000</td>
+				<td><a href="http://www.nfu.edu.tw/main.php">http://www.nfu.edu.tw/main.php</a></td>
+			</tr>
+			<tr>
+				<td>0034</td>
+				<td>國立高雄海洋科技大學</td>
+				<td>[811]高雄市楠梓區海專路142號</td>
+				<td>(07)3617141</td>
+				<td><a href="http://www.nkmu.edu.tw/">http://www.nkmu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0035</td>
+				<td>國立臺南藝術大學</td>
+				<td>[720]臺南市官田區大崎里66號</td>
+				<td>(06)6930100</td>
+				<td><a href="http://www.tnnua.edu.tw/">http://www.tnnua.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0036</td>
+				<td>國立臺南大學</td>
+				<td>[700]臺南市中西區樹林街二段33號</td>
+				<td>(06)2133111</td>
+				<td><a href="http://web.nutn.edu.tw/">http://web.nutn.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>0037</td>
+				<td>國立臺北教育大學</td>
+				<td>[106]臺北市大安區和平東路二段134號</td>
+				<td>(02)27321104</td>
+				<td><a href="http://www.ntue.edu.tw/">http://www.ntue.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>0038</td>
+				<td>國立新竹教育大學</td>
+				<td>[300]新竹市東區南大路521號</td>
+				<td>(035)213132</td>
+				<td><a href="http://www.nhcue.edu.tw/">http://www.nhcue.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>0039</td>
+				<td>國立臺中教育大學</td>
+				<td>[403]臺中市西區民生路140號</td>
+				<td>(04)22183199</td>
+				<td><a href="http://www.ntcu.edu.tw/">http://www.ntcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0040</td>
+				<td>國立屏東教育大學</td>
+				<td>[900]屏東縣屏東市民生路4號之18</td>
+				<td>(08)7226141</td>
+				<td><a href="http://web.npue.edu.tw/">http://web.npue.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0042</td>
+				<td>國立澎湖科技大學</td>
+				<td>[880]澎湖縣馬公市六合路300號</td>
+				<td>(06)9264115</td>
+				<td><a href="http://www.npu.edu.tw/">http://www.npu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0043</td>
+				<td>國立勤益科技大學</td>
+				<td>[411]臺中市太平區坪林里中山路二段57號</td>
+				<td>(04)23924505</td>
+				<td><a href="http://www.ncut.edu.tw/">http://www.ncut.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0044</td>
+				<td>國立體育大學</td>
+				<td>[333]桃園縣龜山鄉文化一路250號</td>
+				<td>(03)3283201</td>
+				<td><a href="http://www.ntsu.edu.tw/">http://www.ntsu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0046</td>
+				<td>國立臺北護理健康大學</td>
+				<td>[112]臺北市北投區明德路365號</td>
+				<td>(02)28227101</td>
+				<td><a href="http://www.ntunhs.edu.tw/bin/home.php">http://www.ntunhs.edu.tw/bin/home.php</a></td>
+			</tr>
+			<tr>
+				<td>0047</td>
+				<td>國立高雄餐旅大學</td>
+				<td>[812]高雄市小港區松和路1號</td>
+				<td>(07)8060505</td>
+				<td><a href="http://www.nkuht.edu.tw/">http://www.nkuht.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0048</td>
+				<td>國立金門大學</td>
+				<td>[892]金門縣金寧鄉大學路1號</td>
+				<td>(082)313300</td>
+				<td><a href="http://www.nqu.edu.tw/cht/index.php">http://www.nqu.edu.tw/cht/index.php</a></td>
+			</tr>
+			<tr>
+				<td>0049</td>
+				<td>國立臺灣體育運動大學</td>
+				<td>[404]臺中市北區雙十路一段16號</td>
+				<td>(04)22213108</td>
+				<td><a href="http://www.ntupes.edu.tw/">http://www.ntupes.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0050</td>
+				<td>國立臺中科技大學</td>
+				<td>[404]臺中市北區三民路三段129號</td>
+				<td>(04)22195678</td>
+				<td><a href="http://www.nutc.edu.tw/bin/home.php">http://www.nutc.edu.tw/bin/home.php</a></td>
+			</tr>
+			<tr>
+				<td>1001</td>
+				<td>東海大學</td>
+				<td>[407]臺中市西屯區臺灣大道四段1727號</td>
+				<td>(04)23590121</td>
+				<td><a href="http://www.thu.edu.tw/">http://www.thu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1002</td>
+				<td>輔仁大學</td>
+				<td>[242]新北市新莊區中正路510號</td>
+				<td>(02)29052000</td>
+				<td><a href="http://www.fju.edu.tw/">http://www.fju.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1003</td>
+				<td>東吳大學</td>
+				<td>[111]臺北市士林區臨溪路70號</td>
+				<td>(02)28819471</td>
+				<td><a href="http://www.scu.edu.tw/">http://www.scu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1004</td>
+				<td>中原大學</td>
+				<td>[320]桃園縣中壢市中北路200號</td>
+				<td>(03)2659999</td>
+				<td><a href="http://www.cycu.edu.tw/">http://www.cycu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1005</td>
+				<td>淡江大學</td>
+				<td>[251]新北市淡水區英專路151號</td>
+				<td>(02)26215656</td>
+				<td><a href="http://www.tku.edu.tw/">http://www.tku.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1006</td>
+				<td>中國文化大學</td>
+				<td>[111]臺北市士林區華岡路55號</td>
+				<td>(02)28610511</td>
+				<td><a href="http://www.pccu.edu.tw/">http://www.pccu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1007</td>
+				<td>逢甲大學</td>
+				<td>[407]臺中市西屯區文華路100號</td>
+				<td>(04)24517250#2258</td>
+				<td><a href="http://www.fcu.edu.tw/">http://www.fcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1008</td>
+				<td>靜宜大學</td>
+				<td>[433]臺中市沙鹿區臺灣大道7段200號</td>
+				<td>(04)26328001</td>
+				<td><a href="http://www.pu.edu.tw/">http://www.pu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1009</td>
+				<td>長庚大學</td>
+				<td>[333]桃園縣龜山鄉文化一路259號</td>
+				<td>(03)2118800</td>
+				<td><a href="http://www.cgu.edu.tw/">http://www.cgu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1010</td>
+				<td>元智大學</td>
+				<td>[320]桃園縣中壢市遠東路135號</td>
+				<td>(03)4638800</td>
+				<td><a href="http://www.yzu.edu.tw/">http://www.yzu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1011</td>
+				<td>中華大學</td>
+				<td>[300]新竹市香山區東香里五福路二段707號</td>
+				<td>(035)374281</td>
+				<td><a href="http://www.chu.edu.tw/">http://www.chu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1012</td>
+				<td>大葉大學</td>
+				<td>[515]彰化縣大村鄉學府路168號</td>
+				<td>(04)8511888</td>
+				<td><a href="http://www.dyu.edu.tw/">http://www.dyu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1013</td>
+				<td>華梵大學</td>
+				<td>[223]新北市石碇區華梵路1號</td>
+				<td>(02)26632102</td>
+				<td><a href="http://www.hfu.edu.tw/">http://www.hfu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1014</td>
+				<td>義守大學</td>
+				<td>[840]高雄市大樹區三和里學城路一段1號</td>
+				<td>(07)6577711</td>
+				<td><a href="http://www.isu.edu.tw/">http://www.isu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1015</td>
+				<td>世新大學</td>
+				<td>[116]臺北市文山區木柵路一段17巷1號</td>
+				<td>(02)22368225</td>
+				<td><a href="http://www.shu.edu.tw/">http://www.shu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1016</td>
+				<td>銘傳大學</td>
+				<td>[111]臺北市士林區中山北路五段250號</td>
+				<td>(02)28824564</td>
+				<td><a href="http://www.mcu.edu.tw/">http://www.mcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1017</td>
+				<td>實踐大學</td>
+				<td>[104]臺北市中山區大直街70號</td>
+				<td>(02)25381111</td>
+				<td><a href="http://www.usc.edu.tw/">http://www.usc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1018</td>
+				<td>朝陽科技大學</td>
+				<td>[413]臺中市霧峰區吉峰東路168號</td>
+				<td>(04)23323000</td>
+				<td><a href="http://www.cyut.edu.tw/">http://www.cyut.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1019</td>
+				<td>高雄醫學大學</td>
+				<td>[807]高雄市三民區十全一路100號</td>
+				<td>(07)3121101</td>
+				<td><a href="http://www2.kmu.edu.tw/front/bin/home.phtml">http://www2.kmu.edu.tw/front/bin/home.phtml</a></td>
+			</tr>
+			<tr>
+				<td>1020</td>
+				<td>南華大學</td>
+				<td>[622]嘉義縣大林鎮南華路一段55號</td>
+				<td>(05)2721001</td>
+				<td><a href="http://www.nhu.edu.tw/">http://www.nhu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1021</td>
+				<td>真理大學</td>
+				<td>[251]新北市淡水區真理街32號</td>
+				<td>(02)26212121</td>
+				<td><a href="http://www.au.edu.tw/">http://www.au.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1022</td>
+				<td>大同大學</td>
+				<td>[104]臺北市中山區中山北路三段40號</td>
+				<td>(02)21822928</td>
+				<td><a href="http://www.ttu.edu.tw/">http://www.ttu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1023</td>
+				<td>南臺科技大學</td>
+				<td>[710]臺南市永康區尚頂里南臺街1號</td>
+				<td>(06)2533131</td>
+				<td><a href="http://www.stust.edu.tw/">http://www.stust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1024</td>
+				<td>崑山科技大學</td>
+				<td>[710]臺南市永康區大灣路949號</td>
+				<td>(06)2727175</td>
+				<td><a href="http://www.ksu.edu.tw/">http://www.ksu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1025</td>
+				<td>嘉南藥理科技大學</td>
+				<td>[717]臺南市仁德區二仁路一段60號</td>
+				<td>(06)2664911</td>
+				<td><a href="http://www.chna.edu.tw/">http://www.chna.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1026</td>
+				<td>樹德科技大學</td>
+				<td>[824]高雄市燕巢區橫山路59號</td>
+				<td>(07)6158000</td>
+				<td><a href="http://www.stu.edu.tw/">http://www.stu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1027</td>
+				<td>慈濟大學</td>
+				<td>[970]花蓮縣花蓮市中央路三段701號</td>
+				<td>(038)565301</td>
+				<td><a href="http://www.tcu.edu.tw/">http://www.tcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1028</td>
+				<td>臺北醫學大學</td>
+				<td>[110]臺北市信義區吳興街250號</td>
+				<td>(02)27361661</td>
+				<td><a href="http://www.tmu.edu.tw/">http://www.tmu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1029</td>
+				<td>中山醫學大學</td>
+				<td>[402]臺中市南區建國北路一段110號</td>
+				<td>(04)24730022</td>
+				<td><a href="http://www.csmu.edu.tw/">http://www.csmu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1030</td>
+				<td>龍華科技大學</td>
+				<td>[333]桃園縣龜山鄉萬壽路一段300號</td>
+				<td>(02)82093211</td>
+				<td><a href="http://www.lhu.edu.tw/">http://www.lhu.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1031</td>
+				<td>輔英科技大學</td>
+				<td>[831]高雄市大寮區進學路151號</td>
+				<td>(07)7811151</td>
+				<td><a href="http://www.fy.edu.tw/">http://www.fy.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1032</td>
+				<td>明新科技大學</td>
+				<td>[304]新竹縣新豐鄉新興路1號</td>
+				<td>(035)593142</td>
+				<td><a href="http://www.must.edu.tw/">http://www.must.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1033</td>
+				<td>長榮大學</td>
+				<td>[711]臺南市歸仁區長大路1號</td>
+				<td>(06)2785123</td>
+				<td><a href="http://www.cjcu.edu.tw/">http://www.cjcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1034</td>
+				<td>弘光科技大學</td>
+				<td>[433]臺中市沙鹿區臺灣大道六段1018號</td>
+				<td>(04)26318652</td>
+				<td><a href="http://www.hk.edu.tw/">http://www.hk.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1035</td>
+				<td>中國醫藥大學</td>
+				<td>[404]臺中市北區學士路91號</td>
+				<td>(04)22053366</td>
+				<td><a href="http://www.cmu.edu.tw/">http://www.cmu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1036</td>
+				<td>健行科技大學</td>
+				<td>[320]桃園縣中壢市健行路229號</td>
+				<td>(03)4581196</td>
+				<td><a href="http://www.uch.edu.tw/">http://www.uch.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1037</td>
+				<td>正修科技大學</td>
+				<td>[833]高雄市鳥松區澄清路840號</td>
+				<td>(07)7358800</td>
+				<td><a href="http://www.csu.edu.tw/main.php">http://www.csu.edu.tw/main.php</a></td>
+			</tr>
+			<tr>
+				<td>1038</td>
+				<td>萬能科技大學</td>
+				<td>[320]桃園縣中壢市萬能路1號</td>
+				<td>(03)4515811</td>
+				<td><a href="http://www.vnu.edu.tw/">http://www.vnu.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1039</td>
+				<td>玄奘大學</td>
+				<td>[300]新竹市香山區東香里玄奘路48號</td>
+				<td>(03)5302255</td>
+				<td><a href="http://www.hcu.edu.tw/">http://www.hcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1040</td>
+				<td>建國科技大學</td>
+				<td>[500]彰化縣彰化市介壽北路1號</td>
+				<td>(04)7111111</td>
+				<td><a href="http://www.ctu.edu.tw/">http://www.ctu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1041</td>
+				<td>明志科技大學</td>
+				<td>[243]新北市泰山區工專路84號</td>
+				<td>(02)29089899</td>
+				<td><a href="http://www.mcut.edu.tw/">http://www.mcut.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1042</td>
+				<td>高苑科技大學</td>
+				<td>[821]高雄市路竹區中山路1821號</td>
+				<td>(07)6077777</td>
+				<td><a href="http://www.kyu.edu.tw/kyunew2/allkyu.html">http://www.kyu.edu.tw/kyunew2/allkyu.html</a></td>
+			</tr>
+			<tr>
+				<td>1043</td>
+				<td>大仁科技大學</td>
+				<td>[907]屏東縣鹽埔鄉新二村維新路20號</td>
+				<td>(08)7624002</td>
+				<td><a href="http://www.tajen.edu.tw/">http://www.tajen.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1044</td>
+				<td>聖約翰科技大學</td>
+				<td>[251]新北市淡水區淡金路四段499號</td>
+				<td>(02)28013131#7011</td>
+				<td><a href="http://www.sju.edu.tw/">http://www.sju.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1045</td>
+				<td>嶺東科技大學</td>
+				<td>[408]臺中市南屯區嶺東路1號</td>
+				<td>(04)23892088</td>
+				<td><a href="http://www.ltu.edu.tw/">http://www.ltu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1046</td>
+				<td>中國科技大學</td>
+				<td>[116]臺北市文山區興隆路三段56號</td>
+				<td>(02)29313416</td>
+				<td><a href="http://www.cute.edu.tw/">http://www.cute.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1047</td>
+				<td>中臺科技大學</td>
+				<td>[406]臺中市北屯區&#24269;子路666號</td>
+				<td>(04)22391647</td>
+				<td><a href="http://www.ctust.edu.tw/">http://www.ctust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1048</td>
+				<td>亞洲大學</td>
+				<td>[413]臺中市霧峰區柳豐路500號</td>
+				<td>(04)23323456</td>
+				<td><a href="http://www.asia.edu.tw/">http://www.asia.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1049</td>
+				<td>開南大學</td>
+				<td>[338]桃園縣蘆竹鄉開南路1號</td>
+				<td>(03)3412500</td>
+				<td><a href="http://www.knu.edu.tw/">http://www.knu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1050</td>
+				<td>佛光大學</td>
+				<td>[262]宜蘭縣礁溪鄉林美村林尾路160號</td>
+				<td>(03)9871000</td>
+				<td><a href="http://www.fgu.edu.tw/">http://www.fgu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1051</td>
+				<td>台南應用科技大學</td>
+				<td>[710]臺南市永康區中正路529號</td>
+				<td>(06)2532106</td>
+				<td><a href="http://www.tut.edu.tw/">http://www.tut.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1052</td>
+				<td>遠東科技大學</td>
+				<td>[744]臺南市新市區中華路49號</td>
+				<td>(06)5979566</td>
+				<td><a href="http://www.feu.edu.tw/">http://www.feu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1053</td>
+				<td>元培科技大學</td>
+				<td>[300]新竹市香山區元培街306號</td>
+				<td>(035)381183</td>
+				<td><a href="http://www.ypu.edu.tw/bin/home.php">http://www.ypu.edu.tw/bin/home.php</a></td>
+			</tr>
+			<tr>
+				<td>1054</td>
+				<td>景文科技大學</td>
+				<td>[231]新北市新店區安忠路99號</td>
+				<td>(02)82122000</td>
+				<td><a href="http://www.just.edu.tw/">http://www.just.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1055</td>
+				<td>中華醫事科技大學</td>
+				<td>[717]臺南市仁德區文華一街89號</td>
+				<td>(06)2674567</td>
+				<td><a href="http://www.hwai.edu.tw/">http://www.hwai.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1056</td>
+				<td>東南科技大學</td>
+				<td>[222]新北市深坑區北深路三段152號</td>
+				<td>(02)86625900</td>
+				<td><a href="http://www.tnu.edu.tw/">http://www.tnu.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1057</td>
+				<td>德明財經科技大學</td>
+				<td>[114]臺北市內湖區環山路一段56號</td>
+				<td>(02)26585801</td>
+				<td><a href="http://www.takming.edu.tw/">http://www.takming.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1058</td>
+				<td>明道大學</td>
+				<td>[523]彰化縣埤頭鄉文化路369號</td>
+				<td>(04)8876660</td>
+				<td><a href="http://www.mdu.edu.tw/">http://www.mdu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1059</td>
+				<td>康寧大學</td>
+				<td>[709]臺南市安南區安中路五段188號</td>
+				<td>(06)2552500</td>
+				<td><a href="http://www.ukn.edu.tw/ukn/index.html">http://www.ukn.edu.tw/ukn/index.html</a></td>
+			</tr>
+			<tr>
+				<td>1060</td>
+				<td>南開科技大學</td>
+				<td>[542]南投縣草屯鎮中正路568號</td>
+				<td>(049)2563489</td>
+				<td><a href="http://www.nkut.edu.tw/">http://www.nkut.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1061</td>
+				<td>中華科技大學</td>
+				<td>[115]臺北市南港區研究院路三段245號</td>
+				<td>(02)27821862</td>
+				<td><a href="http://www.cust.edu.tw/www/cust.html">http://www.cust.edu.tw/www/cust.html</a></td>
+			</tr>
+			<tr>
+				<td>1062</td>
+				<td>僑光科技大學</td>
+				<td>[407]臺中市西屯區僑光路100號</td>
+				<td>(04)27016855</td>
+				<td><a href="http://www.ocu.edu.tw/">http://www.ocu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1063</td>
+				<td>育達科技大學</td>
+				<td>[361]苗栗縣造橋鄉談文村學府路168號</td>
+				<td>(037)651188</td>
+				<td><a href="http://www.ydu.edu.tw/">http://www.ydu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1064</td>
+				<td>美和科技大學</td>
+				<td>[912]屏東縣內埔鄉美和村屏光路23號</td>
+				<td>(08)7799821</td>
+				<td><a href="http://www.meiho.edu.tw/">http://www.meiho.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1065</td>
+				<td>吳鳳科技大學</td>
+				<td>[621]嘉義縣民雄鄉建國路二段117號</td>
+				<td>(05)2267125</td>
+				<td><a href="http://www.wfu.edu.tw/wufeng/"><span style='color:
+blue;font-size:8.0pt'>http://www.wfu.edu.tw/wufeng/</a></td>
+			</tr>
+			<tr>
+				<td>1066</td>
+				<td>環球科技大學</td>
+				<td>[640]雲林縣斗六市嘉東里鎮南路1221號</td>
+				<td>(05)5370988</td>
+				<td><a href="http://www.twu.edu.tw/">http://www.twu.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1067</td>
+				<td>台灣首府大學</td>
+				<td>[721]臺南市麻豆區南勢168號</td>
+				<td>(06)5718888</td>
+				<td><a href="http://www.tsu.edu.tw/">http://www.tsu.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1068</td>
+				<td>中州科技大學</td>
+				<td>[510]彰化縣員林鎮山腳路三段2巷6號</td>
+				<td>(04)8359000</td>
+				<td><a href="http://www.ccut.edu.tw/">http://www.ccut.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1069</td>
+				<td>修平科技大學</td>
+				<td>[412]臺中市大里區工業路11號</td>
+				<td>(04)24961100</td>
+				<td><a href="http://www.hust.edu.tw/">http://www.hust.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1070</td>
+				<td>長庚科技大學</td>
+				<td>[333]桃園縣龜山鄉文化一路261號</td>
+				<td>(03)2118999</td>
+				<td><a href="http://new.cgust.edu.tw/front/bin/home.phtml">http://new.cgust.edu.tw/front/bin/home.phtml</a></td>
+			</tr>
+			<tr>
+				<td>1071</td>
+				<td>台北城市科技大學</td>
+				<td>[112]臺北市北投區學園路2號</td>
+				<td>(02)28927154</td>
+				<td><a href="http://www.tpcu.edu.tw/">http://www.tpcu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1072</td>
+				<td>大華科技大學</td>
+				<td>[307]新竹縣芎林鄉大華路1號</td>
+				<td>(035)927700</td>
+				<td><a href="http://www.tust.edu.tw/">http://www.tust.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1073</td>
+				<td>醒吾科技大學</td>
+				<td>[244]新北市林口區粉寮路一段101號</td>
+				<td>(02)26015310</td>
+				<td><a href="http://www.hwu.edu.tw/">http://www.hwu.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1074</td>
+				<td>南榮科技大學</td>
+				<td>[737]臺南市鹽水區朝琴路178號</td>
+				<td>(06)6523111</td>
+				<td><a href="http://www.njtc.edu.tw/">http://www.njtc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1075</td>
+				<td>文藻外語大學</td>
+				<td>[807]高雄市三民區民族一路900號</td>
+				<td>(07)3426031</td>
+				<td><a href="http://www.wtuc.edu.tw/">http://www.wtuc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>3002</td>
+				<td>臺北市立大學</td>
+				<td>[100]臺北市中正區愛國西路1號</td>
+				<td>(02)23113040</td>
+				<td><a href="http://www.utaipei.edu.tw/">http://www.uTaipei.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0136</td>
+				<td>國立屏東商業技術學院</td>
+				<td>[900]屏東縣屏東市民生東路51號</td>
+				<td>(08)7238700</td>
+				<td><a href="http://www.npic.edu.tw/">http://www.npic.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0142</td>
+				<td>國立臺北商業技術學院</td>
+				<td>[100]臺北市中正區濟南路一段321號</td>
+				<td>(02)23935263</td>
+				<td><a href="http://www.ntcb.edu.tw/">http://www.ntcb.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0144</td>
+				<td>國立臺灣戲曲學院</td>
+				<td>[114]臺北市內湖區內湖路二段177號</td>
+				<td>(02)27962666</td>
+				<td><a href="http://www.tcpa.edu.tw/bin/home.php">http://www.tcpa.edu.tw/bin/home.php</a></td>
+			</tr>
+			<tr>
+				<td>1125</td>
+				<td>興國管理學院</td>
+				<td>[709]臺南市安南區臺江大道三段600號</td>
+				<td>(06)2873335</td>
+				<td><a href="http://www.hku.edu.tw/">http://www.hku.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1148</td>
+				<td>大漢技術學院</td>
+				<td>[971]花蓮縣新城鄉大漢村樹人街1號</td>
+				<td>(038)210888</td>
+				<td><a href="http://www.dahan.edu.tw/">http://www.dahan.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1150</td>
+				<td>慈濟技術學院</td>
+				<td>[970]花蓮縣花蓮市建國路二段880號</td>
+				<td>(03)8572158</td>
+				<td><a href="http://www.tccn.edu.tw/">http://www.tccn.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1154</td>
+				<td>永達技術學院</td>
+				<td>[909]屏東縣麟洛鄉中山路316號</td>
+				<td>(08)7233733</td>
+				<td><a href="http://www.ytit.edu.tw/">http://www.ytit.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1159</td>
+				<td>和春技術學院</td>
+				<td>[831]高雄市大寮區琉球里至學路288號</td>
+				<td>(07)7889888</td>
+				<td><a href="http://www.fotech.edu.tw/">http://www.fotech.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1164</td>
+				<td>致理技術學院</td>
+				<td>[220]新北市板橋區文化路一段313號</td>
+				<td>(02)22576167</td>
+				<td><a href="http://www.chihlee.edu.tw/">http://www.chihlee.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1166</td>
+				<td>亞東技術學院</td>
+				<td>[220]新北市板橋區四川路二段58號</td>
+				<td>(02)77380145</td>
+				<td><a href="http://www.oit.edu.tw/">http://www.oit.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1168</td>
+				<td>桃園創新技術學院</td>
+				<td>[320]桃園縣中壢市中山東路三段414號</td>
+				<td>(03)4361070</td>
+				<td><a href="http://www.nanya.edu.tw/">http://www.nanya.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1176</td>
+				<td>稻江科技暨管理學院</td>
+				<td>[613]嘉義縣朴子市學府路二段51號</td>
+				<td>(05)3622889</td>
+				<td><a href="http://www.toko.edu.tw/">http://www.toko.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1179</td>
+				<td>德霖技術學院</td>
+				<td>[236]新北市土城區青雲路380巷1號</td>
+				<td>(02)22733567</td>
+				<td><a href="http://www.dlit.edu.tw/">http://www.dlit.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1182</td>
+				<td>蘭陽技術學院</td>
+				<td>[261]宜蘭縣頭城鎮復興路79號</td>
+				<td>(039)771997</td>
+				<td><a href="http://www.fit.edu.tw/">http://www.fit.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1183</td>
+				<td>黎明技術學院</td>
+				<td>[243]新北市泰山區黎專路2之2號</td>
+				<td>(02)29097811</td>
+				<td><a href="http://www.lit.edu.tw/">http://www.lit.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1184</td>
+				<td>東方設計學院</td>
+				<td>[829]高雄市湖內區東方路110號</td>
+				<td>(07)6932011</td>
+				<td><a href="http://www.tf.edu.tw/">http://www.tf.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1185</td>
+				<td>經國管理暨健康學院</td>
+				<td>[203]基隆市中山區復興路336號</td>
+				<td>(02)24372093</td>
+				<td><a href="http://www.cku.edu.tw/">http://www.cku.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1187</td>
+				<td>崇右技術學院</td>
+				<td>[201]基隆市信義區義七路40號</td>
+				<td>(02)24237785</td>
+				<td><a href="http://www.cit.edu.tw/">http://www.cit.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1188</td>
+				<td>大同技術學院</td>
+				<td>[600]嘉義市東區彌陀路253號</td>
+				<td>(05)2223124</td>
+				<td><a href="http://www.ttc.edu.tw/">http://www.ttc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1189</td>
+				<td>亞太創意技術學院</td>
+				<td>[351]苗栗縣頭份鎮學府路110號</td>
+				<td>(037)605500</td>
+				<td><a href="http://w2.apic.edu.tw/">http://w2.apic.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1190</td>
+				<td>高鳳數位內容學院</td>
+				<td>[908]屏東縣長治鄉復興村新興路38號</td>
+				<td>(08)7626365</td>
+				<td><a href="http://www.kfcdc.edu.tw/">http://www.kfcdc.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1191</td>
+				<td>華夏技術學院</td>
+				<td>[235]新北市中和區工專路111號</td>
+				<td>(02)89415100</td>
+				<td><a href="http://www.hwh.edu.tw/">http://www.hwh.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1192</td>
+				<td>臺灣觀光學院</td>
+				<td>[974]花蓮縣壽豐鄉豐山村中興街268號</td>
+				<td>(038)653906</td>
+				<td><a href="http://www.tht.edu.tw/">http://www.tht.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1194</td>
+				<td>台北海洋技術學院</td>
+				<td>[111]臺北市士林區延平北路九段212號</td>
+				<td>(02)28102292</td>
+				<td><a href="http://www.tcmt.edu.tw/">http://www.tcmt.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1195</td>
+				<td>馬偕醫學院</td>
+				<td>[252]新北市三芝區中正路三段46號</td>
+				<td>(02)26360303</td>
+				<td><a href="http://www.mmc.edu.tw/">http://www.mmc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0221</td>
+				<td>國立臺南護理專科學校</td>
+				<td>[700]臺南市中西區民族路二段78號</td>
+				<td>(06)2110600</td>
+				<td><a href="http://www.ntin.edu.tw/">http://www.ntin.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>0222</td>
+				<td>國立臺東專科學校</td>
+				<td>[950]臺東縣臺東市正氣北路889號</td>
+				<td>(089)226389#6000　</td>
+				<td><a href="http://www.ntc.edu.tw/">http://www.ntc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1281</td>
+				<td>康寧醫護暨管理專科學校</td>
+				<td>[114]臺北市內湖區康寧路三段75巷137號</td>
+				<td>(02)26321181</td>
+				<td><a href="http://www.knjc.edu.tw/">http://www.knjc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1282</td>
+				<td>馬偕醫護管理專科學校</td>
+				<td>[112]臺北市北投區聖景路92號</td>
+				<td>(02)28584180</td>
+				<td><a href="http://www.mkc.edu.tw/">http://www.mkc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1283</td>
+				<td>仁德醫護管理專科學校</td>
+				<td>[356]苗栗縣後龍鎮溪洲里砂崙湖79之9號</td>
+				<td>(037)728855</td>
+				<td><a href="http://www.jente.edu.tw/">http://www.jente.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1284</td>
+				<td>樹人醫護管理專科學校</td>
+				<td>[821]高雄市路竹區環球路452號</td>
+				<td>(07)6979333</td>
+				<td><a href="http://www.szmc.edu.tw/">http://www.szmc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1285</td>
+				<td>慈惠醫護管理專科學校</td>
+				<td>[926]屏東縣南州鄉三民路367號</td>
+				<td>(08)8647367</td>
+				<td><a href="http://www.tzuhui.edu.tw/">http://www.tzuhui.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1286</td>
+				<td>耕莘健康管理專科學校</td>
+				<td>[231]新北市新店區民族路112號</td>
+				<td>(02)22191131</td>
+				<td><a href="http://www.ctcn.edu.tw/">http://www.ctcn.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1287</td>
+				<td>敏惠醫護管理專科學校</td>
+				<td>[736]臺南市柳營區中山東路二段1116號</td>
+				<td>(06)6226111</td>
+				<td><a href="http://www.mhchcm.edu.tw/">http://www.mhchcm.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1288</td>
+				<td>高美醫護管理專科學校</td>
+				<td>[843]高雄市美濃區成功路309號</td>
+				<td>(07)6812148</td>
+				<td><a href="http://www.kmvs.khc.edu.tw/">http://www.kmvs.khc.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1289</td>
+				<td>育英醫護管理專科學校</td>
+				<td>[807]高雄市三民區大昌二路420巷15號</td>
+				<td>(07)3811765</td>
+				<td><a href="http://163.15.186.16/releaseRedirect.do?unitID=1">http://163.15.186.16/releaseRedirect.do?unitID=1</a></td>
+			</tr>
+			<tr>
+				<td>1290</td>
+				<td>崇仁醫護管理專科學校</td>
+				<td>[600]嘉義市東區盧厝里紅毛埤217號</td>
+				<td>(05)2773932</td>
+				<td><a href="http://www.cjc.edu.tw/">http://www.cjc.edu.tw</a></td>
+			</tr>
+			<tr>
+				<td>1291</td>
+				<td>聖母醫護管理專科學校</td>
+				<td>[266]宜蘭縣三星鄉三星路二段265巷100號</td>
+				<td>(03)9897396</td>
+				<td><a href="http://www.smc.edu.tw/">http://www.smc.edu.tw/</a></td>
+			</tr>
+			<tr>
+				<td>1292</td>
+				<td>新生醫護管理專科學校</td>
+				<td>[325]桃園縣龍潭鄉中豐路高平段418號</td>
+				<td>(03)4117578</td>
+				<td><a href="http://www.web.hsc.edu.tw/bin/home.php">http://www.web.hsc.edu.tw/bin/home.php</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

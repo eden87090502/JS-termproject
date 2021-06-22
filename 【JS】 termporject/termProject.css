@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 1280px;
+  height: 607px;
+  background-color: #1e88a8;
+  position: relative;
+}
+
+#h1 {
+  position: absolute;
+  left: 310px;
+  top: 30px;
+}
+#h3 {
+  font-size: 20px;
+  position: absolute;
+  left: 335px;
+  top: 80px;
+}
+
+#map {
+  width: 631px;
+  height: 421px;
+  background-color: #2b5f75;
+  position: absolute;
+  left: 90px;
+  top: 120px;
+}
+
+#mapBg {
+  /* 讓格子連在一起 */
+  border-collapse: collapse;
+}
+
+/* 設定格子們 */
+#mapBg td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #0b346e;
+}
+
+.snake {
+  width: 20px;
+  height: 20px;
+  background-color: #a8d8b9;
+  position: absolute;
+  top: 64px;
+}
+
+.food {
+  width: 20px;
+  height: 20px;
+  background-color: #f19483;
+  position: absolute;
+}
+
+#control {
+  width: 196px;
+  height: 421px;
+  /* background-color: white; */
+  position: absolute;
+  left: 800px;
+  top: 120px;
+  text-align: center;
+  /* 讓button居中 */
+}
+
+#control button {
+  width: 180px;
+  height: 50px;
+  background-color: #7db9de;
+  margin-bottom: 52px;
+}
+
+#gameOver {
+  width: 180px;
+  height: 105px;
+  background-color: #7db9de;
+  position: absolute;
+  margin-left: 8px;
+  font-size: 35px;
+  color: crimson;
+  font-weight: bold;
+  line-height: 105px;
+}
